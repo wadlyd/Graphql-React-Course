@@ -5,7 +5,7 @@ const githubQuery = ( pageCount, queryString ) => {
         viewer{
           name
         }
-        search(query: "$(queryString) user:wadlyd sort:updated-desc", type: REPOSITORY, first: (pageCount)) {
+        search(query: "${queryString} user:wadlyd sort:updated-desc", type: REPOSITORY, first: ${pageCount}) {
           repositoryCount
             nodes{
                 ... on Repository {
